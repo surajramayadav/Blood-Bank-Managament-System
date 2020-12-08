@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2020 at 08:17 AM
+-- Generation Time: Dec 08, 2020 at 09:57 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -63,7 +63,7 @@ CREATE TABLE `donor` (
 --
 
 INSERT INTO `donor` (`did`, `email`, `password`, `phone`, `name`, `gender`, `blood`, `age`, `city`, `state`) VALUES
-(46, 'surajramayadav@gmail.com', '12345', '8433564425', 'Suraj Yadav', 'male', 'a+', 22, 'mumbai', 'Maharshtra');
+(49, 'surajramayadav@gmail.com', '12345', '8433564425', 'Suraj Yadav', 'male', 'a+', 22, 'mumbai', 'Maharashtra');
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,8 @@ CREATE TABLE `requests` (
 --
 
 INSERT INTO `requests` (`rid`, `did`, `sid`, `status`) VALUES
-(40, 46, 14, 'Accepted');
+(41, 49, 15, 'Requested'),
+(43, 49, 16, 'Requested');
 
 -- --------------------------------------------------------
 
@@ -109,7 +110,8 @@ CREATE TABLE `seeker` (
 --
 
 INSERT INTO `seeker` (`sid`, `email`, `password`, `phone`, `name`, `gender`, `blood`, `age`, `city`, `state`) VALUES
-(14, 'ankit.rama.yadav@gmail.com', '12345', '8433564425', 'ankit yadav', 'male', 'a+', 25, 'mumbai', 'Mah&#257;r&#257;shtra');
+(15, 'Sataymsingh@gmail.com', '12345', '8433564425', 'Sataym Singh', 'male', 'o+', 25, 'mumbai', 'Mah&#257;r&#257;shtra'),
+(16, '2019suraj.yadav@ves.ac.in', '12345', '8433564425', 'Suraj Yadav', 'male', 'o+', 22, 'mumbai', 'Mah&#257;r&#257;shtra');
 
 --
 -- Indexes for dumped tables
@@ -126,7 +128,6 @@ ALTER TABLE `donor`
 --
 ALTER TABLE `requests`
   ADD PRIMARY KEY (`rid`),
-  ADD UNIQUE KEY `did` (`did`),
   ADD KEY `requests_ibfk_1` (`sid`),
   ADD KEY `requests_ibfk_2` (`did`);
 
@@ -144,19 +145,19 @@ ALTER TABLE `seeker`
 -- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
-  MODIFY `did` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `did` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `requests`
 --
 ALTER TABLE `requests`
-  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `seeker`
 --
 ALTER TABLE `seeker`
-  MODIFY `sid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `sid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
