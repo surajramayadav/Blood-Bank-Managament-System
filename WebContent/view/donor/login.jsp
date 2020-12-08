@@ -48,11 +48,11 @@
               <form action="login" method="post">
                 <div class="form-group">
                   <label for="usr">Email:</label>
-                  <input type="text" class="form-control" name="email">
+                  <input type="text" class="form-control" name="email" required="required">
                 </div>
                 <div class="form-group">
                   <label for="usr">Password:</label>
-                  <input type="text" class="form-control" name="password">
+                  <input type="text" class="form-control" name="password" required="required">
                 </div>
                 <div class="form-group">
                   <input type="submit" class="btn btn-primary" value="Login">

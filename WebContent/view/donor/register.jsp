@@ -30,44 +30,44 @@
 							
 							<div class="col-md-6">
 								<label for="usr">Password:</label>
-								<input type="text" class="form-control" name="password">
+								<input type="text" class="form-control" name="password" required="required" >
 							</div>
 							<div class="col-md-6">
 								<label for="usr">Name:</label>
-								<input type="text" class="form-control" name="name">
+								<input type="text" class="form-control" name="name" required="required">
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="col-md-6">
 								<label for="usr">Phone:</label>
-								<input type="text" class="form-control" name="phone">
+								<input type="text" class="form-control" name="phone" required="required" maxlength="10">
 							</div>
 							<div class="col-md-6">
 								<label for="usr">Email:</label>
-								<input type="text" class="form-control" name="email">
+								<input type="email" class="form-control" name="email" required="required" >
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="col-md-6">
 								<label for="usr">Gender:</label>
-								<input type="text" class="form-control" name="gender">
+								<input type="text" class="form-control" name="gender" required="required">
 							</div>
 							<div class="col-md-6">
 								<label for="usr">Age:</label>
-								<input type="text" class="form-control" name="age">
+								<input type="text" class="form-control" name="age" required="required" maxlength="2">
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="col-md-6">
 								<label for="usr">City:</label>
-								<input type="text" class="form-control" name="city">
+								<input type="text" class="form-control" name="city" required="required">
 							</div>
 							<div class="col-md-6">
 								<label for="usr">Blood Group:</label>
-								<input type="text" class="form-control" name="blood_group">
+								<input type="text" class="form-control" name="blood_group" required="required" maxlength="2">
 							</div>
 						</div>
                       
@@ -75,7 +75,7 @@
 
 						<div class="form-group">
 							<label for="usr">State:</label>
-							<input type="text" class="form-control" name="state">
+							<input type="text" class="form-control" name="state" required="required">
 						</div>
 						<div class="form-group">
 							<input type="submit" class="btn btn-primary" value="Register ">
